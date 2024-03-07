@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+
+  <header >
+    <div class="container">
+      <h2>ЭЙ ТЫ!</h2>
+      <img src="images/pinterest2.jpg" alt="">
+      <h2>Я люблю тебя!<h2>
+      <img src="images/pinterest7.jpg" alt="">
+    </div>
+  </header>
+
+
+  <main>
+    <section class="section-1">
+      <div  class="container">
+        <h2> Dear my Miss D</h2>
+        <p>Поздравляю с прекрасным днем весны и с твоим праздником 8 марта <3 </p>
+        <img src="images/pinterest4.jpg" alt="">
+      </div>
+    </section>
+    <section class="section-2">
+      <div class="container">
+        <p>а знаешь почему это твой праздник? потому что</p>
+        <ul class="section-2__list">
+          <li> <img src="images/precrasna/photo_2.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_15.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_3.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_5.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_8.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_6.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_7.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_11.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_9.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_10.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_4.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_12.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_13.jpg" alt=""></li>
+          <li> <img src="images/precrasna/photo_14.jpg" alt=""></li>
+        </ul>
+        <div class="gallery-controls">
+          <button class="prev-btn">назад</button>
+          <button class="next-btn">вперед</button>
+        </div>
+      </div>
+    </section>
+    <section class="section-3">
+      <div class="container">
+        <h2 class="section-3__text">Тюльпаны расцветают в начале весны не просто так, <br>
+          Они так поступают, потому что начало весны твой праздник! <br>
+          Ты заслуживаешь всего этого не только 1 день в году, <br>
+          а все 365 дней.
+        </h2>
+      </div>
+      <div class="container">
+        <div>
+          <p> стой стой стой, кликни на кнопочку справа</p>
+          <img src="images/pinterest1.jpg" alt="">
+          <button class="photo">click</button>
+        </div>
+        <div class="section-3__hidden">
+          <img id="pinterest5" class="hidden" src="images/pinterest5.jpg" alt="">
+          <p id="caption" class="hidden">ой это же ты</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-4">
+      <div class="container">
+        <div>
+          <p>еще один цветочек для моей любимой</p>
+          <img src="images/pinterest6.jpg" alt="">
+        </div>
+        <div class="section-4__comment">
+          <p> Твой человек не тот, кому «с тобой
+            хорошо», - с тобой может <br>быть
+            хорошо сотне людей. Твоему - «без
+            тебя плохо». Я <br>очень рад, что ты у меня есть.
+            Твое присутствие в моем <br>дне делает его гораздо 
+            ярче и счастливее. </p>
+        </div>
+        <div class="section-4__comment-img">
+            <img src="images/comment.jpg" alt="">
+            <p>люблю тебя жаным очень сильно!!!</p>
+            <p>а это мы уснули</p>
+            <img src="images/pinterest3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer>
+
+      <section class="footer">
+        <div class="container">
+          <h2>Are you a calendar ?<h2>
+          <h2>Because I wanna ask you for a date</h2>
+          <img src="images/cosmuse.jpg" alt="">
+        </div>
+        <div class="footer__form">
+          <form class="container"> 
+            <fieldset class="buttons">
+              <legend> Ты пойдешь со мной на концертный вечер ?</legend>
+              <button class="footer__button" onclick="showNotification('УРАААААААААА')">ДА!</button>
+              <button class="footer__button" onclick="showNotification('А что выбор был что ли хехе')">КОНЕЧНО!</button>    
+            </fieldset> 
+          </form>
+          <div class="container">
+            <p>тогда завтра буду ждать у общаги к 18:15)))</p>
+            <q>с любовью твой бэйбик!</q>
+          </div>
+        </div>
+      
+      </section>
+  </Footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const sectionList = document.querySelector('.section-2__list');
+  const images = document.querySelectorAll('.section-2__list li img');
+  const scrollDistance = 320;
+  const secondImageWidth = 360;
+  prevBtn.addEventListener('click', function() {
+    sectionList.scrollBy({
+      left: -scrollDistance,
+      behavior: 'smooth'
+    });
+  });
+  nextBtn.addEventListener('click', function() {
+    sectionList.scrollBy({
+      left: scrollDistance,
+      behavior: 'smooth'
+    });
+  });
+  sectionList.addEventListener('scroll', function() {
+    updateImageSize();
+  });
+  function updateImageSize() {
+    const index = Math.round(sectionList.scrollLeft / scrollDistance) + 1;
+    images.forEach(function(image, i) {
+      if (i === index) {
+        image.style.width = secondImageWidth + 'px';
+        image.style.height = secondImageWidth + 'px';
+      } else {
+        image.style.width = '300px';
+        image.style.height = '300px'; 
+      }
+    });
+  }
+  updateImageSize();
+});
+  </script>
+
+  <script>
+    document.querySelector('.photo').addEventListener('click', function() {
+    const image = document.getElementById('pinterest5');
+    const caption = document.getElementById('caption');
+    image.classList.remove('hidden');
+    image.classList.add('visible');
+    caption.classList.remove('hidden');
+    caption.classList.add('visible');
+}); 
+  </script>
+
+  <script>
+    function showNotification(message) {
+      alert(message);
+    }
+  </script>
+</body>
+</html>
